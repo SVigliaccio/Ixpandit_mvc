@@ -1,0 +1,4 @@
+#Para que sea index el archivo que se cargue inicialmente.Con esto centralizo para que index sea el punto de salida de los archivos.
+#Le asigno una regla a apache para que cada vez que se ingresa una url dentro de la app siempre trate de cargar index.php primero.
+RewriteEngine On
+RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
